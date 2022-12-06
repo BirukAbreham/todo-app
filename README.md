@@ -12,7 +12,7 @@ The challenge requires the design to be able to:
 
 ## Links
 
--   Live Site URL: [Todo App](https://tip-calculator-app-seven-rose.vercel.app/)
+-   Live Site URL: [Todo App](https://todo-app-delta-liard.vercel.app/)
 
 ## My Process
 

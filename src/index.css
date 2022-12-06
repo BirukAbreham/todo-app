@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.app {
+    min-height: 100vh;
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.container {
+    padding: 8% 30%;
+}
+
+.app--header {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    color: hsl(0, 0%, 98%);
+    justify-content: space-between;
+}
+
+.app--title {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 8px;
+}
+
+.app--mode {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.app--add {
+    margin-bottom: 30px;
+}
+
+.app--add > input[type=text] {
+    width: 100%;
+    padding: 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.app--add.dark > input[type=text] {
+    color: hsl(234, 39%, 85%);
+    background-color: hsl(235, 24%, 19%);
+}
+
+.app--add > input[type=text]:focus {
+    width: 100%;
+    padding: 25px;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.app--add.dark > input[type=text]:focus {
+    color: hsl(236, 33%, 92%);
+    background-color: hsl(235, 24%, 19%);
+}
+
+.tasks {
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.tasks.dark {
+    background-color: hsl(235, 24%, 19%);
+}
+
+.task--item {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 30px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .5px solid hsl(233, 11%, 84%);
+}
+
+#check {
+    width: 25px;
+    height: 25px;
+    outline: none;
+    flex: 0 1 auto;
+    cursor: pointer;
+    appearance: none;
+    flex-basis: 25px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid hsl(233, 11%, 84%);
+}
+
+#check:checked {
+    /* background: url(../images/icon-check.svg) no-repeat center; */
+    background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+}
+
+.task--item > label {
+    cursor: pointer;
+    flex-basis: auto;
+    flex: 0 1 95%;
+    color: hsl(235, 24%, 19%);
+}
+
+.task--item .task--delete {
+    flex-basis: 26px;
+    flex: 0 1 0;
+}
+
+.task--item.dark {
+    border-bottom: .5px solid rgb(100, 100, 100);
+}
+
+.task--item.dark > label {
+    color: hsl(234, 39%, 85%);
+}
+
+.task--item > .task--completed,
+.task--item.dark > .task--completed {
+    color: hsl(236, 9%, 61%);
+    text-decoration: line-through;
+}
+
+.task--item > input[type=checkbox] {
+    margin-right: 20px;
+}
+
+.task--actions {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsl(236, 9%, 61%);
+    padding-block: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.item--filter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.item-mobile--filter {
+    display: none;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.clear--completed {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1278px) {
+    .container {
+        padding: 8% 5%;
+    }
+    
+    .app--header {
+        margin-bottom: 20px;
+    }
+    
+    .app--title {
+        font-size: 24px;
+        letter-spacing: 6px;
+    }
+
+    .item--filter {
+        display: none;
+    }
+    
+    .item-mobile--filter {
+        display: grid;
+        margin-block: 20px;
+        border-radius: 8px;
+        padding: 20px 70px;
+        background-color: #fff;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .item-mobile--filter.dark {
+        background-color: hsl(235, 24%, 19%);
+    }
+
+    .task--item {
+        padding: 20px;
+    }
+}
